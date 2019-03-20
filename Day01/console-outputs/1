@@ -1,0 +1,30 @@
+let a = 246
+undefined
+typeof a
+"number"
+a = "ADbafnb"
+"ADbafnb"
+typeof a
+"string"
+typeof "Asdasdsadasd"
+"string"
+typeof 'a'
+"string"
+typeof 'afgdfgh'
+"string"
+typeof "afgdfgh"
+"string"
+typeof `afgdfgh`
+"string"
+typeof 3
+"number"
+typeof 3.6
+"number"
+typeof false
+"boolean"
+typeof true
+"boolean"
+typeof [1,2,3]
+"object"
+typeof null
+"object"
