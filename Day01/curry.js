@@ -19,12 +19,21 @@ let b = add(5)(6)() // 11
 
 console.log(a, b)
 
+function sum (x) {
+  return function sum2(y) {
+    if (typeof y == 'undefined') {
+      return x
+    } else {
+      x += y
+      return sum2
+    }
+  }
+}
 
 
 
+console.log(sum(1)(2)(3)()) // return 6
 
-// add(1)(2)(3)() // return 6
+console.log(sum(5)()) // return 5
 
-// add(5)() // return 5
-
-// add(2)(8)(6)(4)() // return 20
+console.log(sum(2)(8)(6)(4)()) // return 20
