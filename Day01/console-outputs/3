@@ -1,0 +1,30 @@
+Number(' ')
+0
+Number('       ')
+0
+Number('')
+0
+Number('\n')
+0
+Number('\t')
+0
+' ' == '       '
+false
+' ' == 0
+true
+0 == '       '
+true
+Number(false)
+0
+Number(true)
+1
++''
+0
++'  '
+0
+'abc' + (+'  ')
+"abc0"
+'abc' ++'  '
+SyntaxError: invalid increment/decrement operand debugger eval code:1
+'abc' + +'  '
+"abc0"
