@@ -1,0 +1,19 @@
+Hello World script.js:1:9
+asd : dsfn script.js:12:9
+54 : 457 script.js:13:9
+null : null script.js:14:9
+undefined : undefined script.js:15:9
+4 : 5 script.js:16:9
+Area = 24 script.js:18:9
+Area = 16 script.js:19:9
+typeof alpha()
+"string"
+typeof alpha
+"function"
+let x = alpha
+undefined
+x(5,6)
+"5 : 6"
+let y = 'asdsad'
+undefined
+y()

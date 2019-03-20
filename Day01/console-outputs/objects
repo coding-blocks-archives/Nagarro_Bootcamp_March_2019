@@ -1,0 +1,17 @@
+obj
+Object { a: 245, b: "aasdsad", c: false, d: (3) […], e: {…} }
+
+obj.a
+245
+obj.b
+"aasdsad"
+obj.d
+Array(3) [ 34, "sdf", true ]
+
+obj.d[2]
+true
+obj.e
+Object { p: 10, q: "adb" }
+
+obj.e.p
+10
