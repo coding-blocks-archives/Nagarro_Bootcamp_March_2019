@@ -1,0 +1,5 @@
+r2 = count
+
+r2 = r2 - 1
+
+count =  r2
