@@ -8,13 +8,34 @@ window.onload = () => {
     let N = parseInt(num.value)
     let start = new Date().getTime()
 
-    for (let i = 1; i <= N; i++) {
+    let i = 1
+    let x = setInterval(() => {
       let li = document.createElement('li')
       li.textContent = i
       numlist.appendChild(li)
-    }
+
+      if (i === N) {
+        clearInterval(x)
+      }
+
+      i++
+    }, 100)
+
+
+
+    // for (let i = 1; i <= N; i++) {
+
+    //   setTimeout(() => {
+    //     let li = document.createElement('li')
+    //     li.textContent = i
+    //     numlist.appendChild(li)
+    //   }, i * 100)
+
+    // }
     let end = new Date().getTime()
     console.log(`Done in ${end - start}`)
 
   }
+
+
 }
