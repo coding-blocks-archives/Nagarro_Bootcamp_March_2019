@@ -7,8 +7,18 @@
 
 class Shape {
   constructor(sides, color) {
-    this.sides = sides
+    let a = 10
+    console.log(this.vertices)
+    this.vertices = sides
+    console.log(this.vertices)
     this.color = color
+
+    this.getA = function (){
+      return a
+    }
+    this.setA = function (val){
+      a = val
+    }
   }
   isTriangle() {
     return this.vertices  === 3
