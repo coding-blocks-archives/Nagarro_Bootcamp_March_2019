@@ -26,6 +26,8 @@ $(() => {
       (data) => {
         if (data.success) {
           refreshList()
+        } else {
+          alert('Some error occurred')
         }
       }
     )

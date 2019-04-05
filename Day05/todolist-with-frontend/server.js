@@ -1,29 +1,42 @@
 const express = require('express')
+const {
+  db,
+  Todos
+} = require('./db')
 
 const app = express()
 
 app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({
+  extended: true
+}))
 
 app.use('/',
   express.static(__dirname + '/public')
 )
 
-let todos = [
-  {name: 'first task', priority: 3},
-  {name: 'another task', priority: 5},
-]
+app.get('/todos', async (req, res) => {
 
-app.get('/todos', (req, res) => {
+  const todos = await Todos.findAll()
   res.send(todos)
 })
 
-app.post('/todos', (req, res) => {
-  todos.push({
-    name: req.body.name,
-    priority: parseInt(req.body.priority)
-  })
-  res.send({success: true})
+app.post('/todos', async (req, res) => {
+
+  try {
+    const result = await Todos.create({
+      name: req.body.name,
+      priority: parseInt(req.body.priority)
+    })
+    res.send({success: true})
+  } catch (e) {
+    res.send({success: false, err: e.message})
+  }
+
+
 })
 
-app.listen(8989)
+db.sync()
+  .then(() => {
+    app.listen(8989)
+  })

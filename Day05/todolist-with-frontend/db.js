@@ -22,27 +22,6 @@ const Todos = db.define('todo', {
   }
 })
 
-db.sync()
-  .then(() => {
-    console.log('Database synced')
-
-    // Todos.create({name: 'random  task'})
-
-    Todos.findAll({
-      where: {
-        [Op.or]: {
-          priority: {
-            [Op.lt]: 3
-          },
-          id: {
-            [Op.gt]: 2
-          }
-        }
-      }
-    }).then((todos) => {
-      for (let t of todos) {
-        console.log(t.name + '  ' + t.priority)
-      }
-    })
-
-  })
+module.exports = {
+  db, Todos
+}
