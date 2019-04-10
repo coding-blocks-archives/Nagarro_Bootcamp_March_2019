@@ -1,0 +1,15 @@
+{
+  "name": "shopcart-dbrels",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sequelize": "^5.2.15",
+    "sqlite3": "^4.0.6"
+  }
+}
